@@ -1,0 +1,16 @@
+spring:
+  profiles.active: git
+  application:
+    name: newv-config
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri: https://github.com/bleusoir/newv-config.git
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, busrefresh
