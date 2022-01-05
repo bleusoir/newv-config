@@ -7,7 +7,7 @@ spring:
       server:
         git:
           default-label: main
-          uri: https://github.com/bleusoir/newv-config.git
+          uri: https://github.com/bleusoir/newv-cloud-config.git
 
 management:
   endpoints:
