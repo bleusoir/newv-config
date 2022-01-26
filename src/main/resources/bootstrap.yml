@@ -1,2 +1,2 @@
 encrypt:
-  key: ${ENCRYPT_KEY}
+  key: ${NEWV_ENCRYPT_ENV:password}

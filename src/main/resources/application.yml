@@ -5,12 +5,19 @@ spring:
   cloud:
     config:
       server:
+        native:
+          searchLocations: ${NATIVE_FILE_PATH}
         git:
-          default-label: main
+          defaultLabel: main
           uri: https://github.com/bleusoir/newv-cloud-config.git
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USER:local}
+    password: ${RABBITMQ_PASS:test}
 
 management:
   endpoints:
     web:
       exposure:
-        include: refresh, health, beans, busrefresh
+        include: health, busrefresh
